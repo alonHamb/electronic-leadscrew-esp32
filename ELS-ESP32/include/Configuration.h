@@ -33,16 +33,16 @@
 //
 //================================================================================
 
-#define ESP32_TM1638_STROBE_PIN                     25     
-#define ESP32_TM1638_CLOCK_PIN                      26
-#define ESP32_TM1638_DATA_PIN                       27
+#define ESP32_TM1638_STROBE_PIN                     21
+#define ESP32_TM1638_CLOCK_PIN                      22
+#define ESP32_TM1638_DATA_PIN                       23
 
 #define ESP32_ENCODER_A_PIN                         18
 #define ESP32_ENCODER_B_PIN                         19
 
-#define ESP32_MOTOR_STEP_PIN                        32
-#define ESP32_MOTOR_DIR_PIN                         33
-#define ESP32_MOTOR_ENABLE_PIN                       5
+#define ESP32_MOTOR_STEP_PIN                        4
+#define ESP32_MOTOR_DIR_PIN                         5
+#define ESP32_MOTOR_ENABLE_PIN                      30
 #define ESP32_MOTOR_ALARM_PIN                       35
 
 
@@ -56,7 +56,7 @@
 //================================================================================
 
 // For Imperial leadscrews: pitch in Threads Per Inch (TPI)
-#define LEADSCREW_TPI 12
+#define LEADSCREW_TPI 8
 
 // For metric leadscrews: pitch in hundredths of a millimeter (HMM)
 // Example: 200hmm = 2mm
@@ -85,8 +85,8 @@
 
 // Separate step and microstep settings for feed rates.  Redefine these if your
 // lathe has a separate feed drive train with a different ratio.
-#define STEPPER_MICROSTEPS_FEED STEPPER_MICROSTEPS
-#define STEPPER_RESOLUTION_FEED STEPPER_RESOLUTION
+#define STEPPER_MICROSTEPS_FEED 8
+#define STEPPER_RESOLUTION_FEED 16
 
 // Step, direction and enable pins are normally active-high
 // #define INVERT_STEP_PIN
@@ -112,7 +112,7 @@
 //================================================================================
 
 // Encoder resolution (counts per revolution)
-#define ENCODER_RESOLUTION 4096
+#define ENCODER_RESOLUTION 8192
 //#define ENCODER_RESOLUTION 80
 
 // Which encoder input to use
